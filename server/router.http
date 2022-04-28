@@ -1,0 +1,26 @@
+@server = http://localhost:3090
+@token = paste your token
+
+### Signup Request
+POST {{server}}/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test8@example.com",
+  "password": "123"
+}
+
+### Signin Request
+POST {{server}}/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test8@example.com",
+  "password": "123"
+}
+
+### Get with auth
+GET {{server}} HTTP/1.1
+Content-Type: application/json
+authorization: {{token}}
+
